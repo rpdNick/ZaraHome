@@ -72,8 +72,6 @@ body {
   body .survey-container {
     max-width: 450px;
     margin: 0 auto;
-    -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     padding-bottom: 30px; }
     body .survey-container .wrapper {
       padding: 0 25px; }
@@ -161,7 +159,8 @@ body {
             body .survey-container .wrapper .main-question-box .range10 label .color11 {
               border: 1.5px solid #008A00; }
     body .survey-container .hidden-questions {
-      margin-top: 25px; }
+      margin-top: 25px;
+      display: none; }
       body .survey-container .hidden-questions .thx-text-wrapper {
         border-top: 1px solid #fff;
         border-bottom: 1px solid #fff;
@@ -186,6 +185,9 @@ body {
           font-size: 14px;
           line-height: 16px;
           color: #000; }
+        body .survey-container .hidden-questions .question-wrapper .smaller-font {
+          font-weight: 500;
+          font-size: 12px; }
         body .survey-container .hidden-questions .question-wrapper .flex-container {
           display: flex;
           justify-content: space-between;
@@ -209,10 +211,13 @@ body {
               height: 0;
               width: 0; }
             body .survey-container .hidden-questions .question-wrapper .flex-container .answers-wrapper .radio_container .answer {
-              font-size: 15px;
+              font-size: 14px;
               padding-left: 5px;
               color: #000000;
               display: inline-block; }
+            body .survey-container .hidden-questions .question-wrapper .flex-container .answers-wrapper .radio_container .answer-font {
+              font-size: 12px;
+              color: #333333; }
             body .survey-container .hidden-questions .question-wrapper .flex-container .answers-wrapper .radio_container .checkmark {
               position: absolute;
               top: 0px;
@@ -225,6 +230,12 @@ body {
               border: 1px solid #666666;
               border-radius: 50%;
               box-sizing: unset; }
+            body .survey-container .hidden-questions .question-wrapper .flex-container .answers-wrapper .radio_container .checkmark-size {
+              top: 3px;
+              width: 14px;
+              height: 14px;
+              max-width: 14px;
+              min-width: 14px; }
             body .survey-container .hidden-questions .question-wrapper .flex-container .answers-wrapper .radio_container input:checked ~ .checkmark:before {
               content: '';
               width: 10px;
@@ -236,6 +247,14 @@ body {
               left: calc( 50% - 5px);
               top: calc( 50% - 5px);
               border-radius: 50%; }
+            body .survey-container .hidden-questions .question-wrapper .flex-container .answers-wrapper .radio_container input:checked ~ .checkmark-size:before {
+              content: '';
+              width: 8px;
+              height: 8px;
+              max-width: 8px;
+              min-width: 8px;
+              left: calc( 50% - 4px);
+              top: calc( 50% - 4px); }
             body .survey-container .hidden-questions .question-wrapper .flex-container .answers-wrapper .radio_container input:checked ~ .checkmark {
               animation: pulse 0.5s; }
 @-webkit-keyframes pulse {
@@ -280,39 +299,41 @@ body {
           font-size: 14px;
           line-height: 16px;
           color: #000000;
-          margin-top: 20px;
-          margin-bottom: 20px; }
-        body .survey-container .hidden-questions .question-wrapper .comment-box {
-          padding: 35px 20px 20px 20px;
-          position: relative; }
-          body .survey-container .hidden-questions .question-wrapper .comment-box .comment-icon {
-            position: absolute;
-            width: 24px;
-            height: 24px;
-            background-image: url("../img/commnt-icon.svg");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain;
-            right: 20px;
-            top: 30px; }
-          body .survey-container .hidden-questions .question-wrapper .comment-box #comment_9-10 {
-            resize: none;
-            border: none;
-            outline: none;
-            border-bottom: 1px solid #A09B9B;
-            background: transparent;
-            width: 100%;
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 16px; }
-          body .survey-container .hidden-questions .question-wrapper .comment-box #comment_9-10::placeholder {
-            padding-left: 45px;
-            color: #000;
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 16px; }
+          margin-bottom: 20px;
+          margin-top: 30px; }
+      body .survey-container .hidden-questions .comment-box {
+        padding: 35px 25px 20px 25px;
+        position: relative; }
+        body .survey-container .hidden-questions .comment-box .comment-icon {
+          position: absolute;
+          width: 24px;
+          height: 24px;
+          background-image: url("../img/commnt-icon.svg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          right: 25px;
+          top: 30px; }
+        body .survey-container .hidden-questions .comment-box .comment-field {
+          resize: none;
+          border: none;
+          outline: none;
+          border-bottom: 1px solid #A09B9B;
+          background: transparent;
+          width: 100%;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 16px; }
+        body .survey-container .hidden-questions .comment-box .comment-field::placeholder {
+          padding-left: 65px;
+          color: #000;
+          font-weight: 500;
+          font-size: 15px;
+          line-height: 16px;
+          font-style: italic; }
     body .survey-container .submit-wrapper {
-      margin-top: 45px; }
+      margin-top: 45px;
+      display: none; }
       body .survey-container .submit-wrapper .save-btn {
         display: block;
         width: 170px;
@@ -338,5 +359,9 @@ body {
     font-size: 16px; }
   body .main-page-container .survey-wrapper .bottom-txt {
     font-size: 14px; } }
+@media (min-width: 430px) {
+  body .survey-container {
+    -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); } }
 
 /*# sourceMappingURL=style.css.map */
