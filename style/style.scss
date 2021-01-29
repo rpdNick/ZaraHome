@@ -420,6 +420,126 @@ body{
         background: transparent;
       }
     }
+    #contacts-form{
+      position: relative;
+      .contacts-gray-block{
+        margin-top: 50px;
+        .wrapper{
+          padding: 20px 25px;
+          .line{
+            border-top: 1px solid #A09B9B;
+          }
+          .contact-box{
+            margin-top: 40px;
+            position: relative;
+            .contact-label{
+              font-size: 14px;
+              color: #282423;
+              font-style: normal;
+              font-weight: normal;
+              position: relative;
+              padding-left: 70px;
+              margin-bottom: 20px;
+            }
+            .contact-label:before{
+              content: '';
+              position: absolute;
+              left: 20px;
+              top: -4px;
+              width: 23px;
+              height: 23px;
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
+            }
+            .name-label:before{
+              background: url("../img/name.svg");
+            }
+            .phone-label:before{
+              background: url("../img/phone.svg");
+            }
+            .email-label:before{
+              background: url("../img/email.svg");
+            }
+            .data-field{
+              border: none;
+              outline: none;
+              border-radius: 0;
+              background: transparent;
+              -webkit-border-radius:0px;
+              -webkit-appearance: none;
+              border-bottom: 1px solid #A09B9B;
+              width: 100%;
+              padding: 10px 5px;
+              font-size: 14px;
+              color: #000;
+            }
+            .data-error{
+              font-weight: 600;
+              font-size: 12px;
+              color: #E1032E;
+              margin-top: 10px;
+              display: none;
+            }
+          }
+        }
+      }
+      .contacts-submit-wrapper{
+          margin-top: 150px;
+        .save-btn{
+          display: block;
+          width: 170px;
+          height: 47px;
+          margin: 0 auto;
+          outline: none;
+          border: 1px solid #333333;
+          color: #333333;
+          font-size: 16px;
+          line-height: 28px;
+          text-align: center;
+          background: transparent;
+        }
+      }
+    }
+  }
+  .contacts-page-container{
+    max-width: 450px;
+    margin: 0 auto;
+  }
+  .end-page-container{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    background: url(../img/end-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .logo-box{
+      padding: 40px 30px 0px 30px;
+      img{
+        width: 162px;
+      }
+    }
+    .thx-block{
+      margin-top: 50%;
+      background: rgba(223, 217, 205, 0.31);
+      backdrop-filter: blur(7px);
+      padding: 40px 0px;
+      .thx-txt{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 32px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #ffffff;
+      }
+    }
   }
 }
 @media (max-height: 680px) {
