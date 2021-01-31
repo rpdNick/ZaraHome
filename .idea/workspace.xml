@@ -20,11 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d15ea4e-bd22-40b7-8e41-fd8821ed41d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/script/contacts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/script/survey.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/contacts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/survey.html" beforeDir="false" afterPath="$PROJECT_DIR$/survey.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/contacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/script/contacts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/style/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/style/style.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +59,10 @@
       <updated>1611830554772</updated>
       <workItem from="1611830555827" duration="15826000" />
       <workItem from="1611905165457" duration="5653000" />
-      <workItem from="1611911013635" duration="17943000" />
+      <workItem from="1611911013635" duration="19292000" />
+      <workItem from="1612101020326" duration="52000" />
+      <workItem from="1612101087135" duration="188000" />
+      <workItem from="1612126899483" duration="1177000" />
     </task>
     <servers />
   </component>
@@ -75,12 +79,13 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2381" y="165" key="SettingsEditor" timestamp="1611830586844">
+    <state x="2381" y="165" key="SettingsEditor" timestamp="1612101247808">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2381" y="165" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1611830586844" />
+    <state x="2381" y="165" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1612101247808" />
     <state x="2536" y="240" key="run.anything.popup" timestamp="1611833039750">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>

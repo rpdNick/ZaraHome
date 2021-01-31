@@ -393,6 +393,14 @@ body {
               padding: 10px 5px;
               font-size: 14px;
               color: #000; }
+            body .survey-container #contacts-form .contacts-gray-block .wrapper .contact-box #phone {
+              padding-left: 15px; }
+            body .survey-container #contacts-form .contacts-gray-block .wrapper .contact-box .phone-prefix {
+              position: absolute;
+              left: 0;
+              padding: 10px 5px;
+              font-size: 14px;
+              color: #000; }
             body .survey-container #contacts-form .contacts-gray-block .wrapper .contact-box .data-error {
               font-weight: 600;
               font-size: 12px;
