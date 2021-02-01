@@ -89,10 +89,10 @@ body{
       .main-question-box{
         margin-top: 20px;
         .q-text{
-          font-weight: 500;
+          font-weight: 600;
           font-size: 12px;
           text-transform: uppercase;
-          color: #000;
+          color: #000000;
           line-height: 17px;
         }
         .range10{
@@ -144,7 +144,7 @@ body{
             .range-number{
               width: 26px;
               height: 26px;
-              line-height: 23px;
+              line-height: 20px;
               margin-right: 0px;
               text-align: center;
               border-radius: 50%;
@@ -164,29 +164,26 @@ body{
             }
             .color4{
               border: 1.5px solid #C13010;
-              line-height: 21px;
             }
             .color5{
               border: 1.5px solid #D04205;
-              line-height: 20px;
             }
             .color6{
               border: 1.5px solid #DA5B13;
-              line-height: 21px;
             }
             .color7{
               border: 1.5px solid #EF6A1F;
-              line-height: 25px;
+              line-height: 23px;
             }
             .color8{
               border: 1.5px solid #F39A13;
             }
             .color9{
               border: 1.5px solid #FFBF00;
+              line-height: 23px;
             }
             .color10{
               border: 1.5px solid #4AAE27;
-              line-height: 21px;
             }
             .color11{
               border: 1.5px solid #008A00;
@@ -207,7 +204,8 @@ body{
           color: #666666;
           font-weight: 600;
           font-size: 13px;
-          line-height: 13px;
+          line-height: 16px;
+          text-transform: uppercase;
         }
         .light-txt{
           font-weight: 400;
@@ -255,9 +253,9 @@ body{
                 width: 0;
               }
               .answer{
-                font-size: 14px;
+                font-size: 12px;
                 padding-left: 5px;
-                color: #000000;
+                color: #666666;
                 display: inline-block;
               }
               .answer-font{
@@ -266,7 +264,7 @@ body{
               }
               .checkmark{
                 position: absolute;
-                top: 0px;
+                top: 1px;
                 left: 0px;
                 width: 16px;
                 height: 16px;
@@ -364,42 +362,57 @@ body{
           font-size: 14px;
           line-height: 16px;
           color: #000000;
-          margin-bottom: 20px;
-          margin-top: 30px;
+          margin-bottom: 35px;
+          margin-top: 20px;
         }
       }
       .comment-box{
-        padding: 35px 25px 20px 25px;
-        position: relative;
-        .comment-icon{
-          position: absolute;
-          width: 24px;
-          height: 24px;
-          background-image: url("../img/commnt-icon.svg");
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: contain;
-          right: 25px;
-          top: 30px;
-        }
-        .comment-field{
-          resize: none;
-          border: none;
-          outline: none;
-          border-bottom: 1px solid #A09B9B;
-          background: transparent;
-          width: 100%;
-          font-weight: 500;
-          font-size: 14px;
-          line-height: 16px;
-        }
-        .comment-field::placeholder{
-          padding-left: 65px;
-          color: #000;
-          font-weight: 500;
-          font-size: 15px;
-          line-height: 16px;
-          font-style: italic;
+        padding: 45px 25px 20px 25px;
+        .comment-label-wrapper{
+          position: relative;
+          .label-txt{
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #A09B9B;
+            font-size: 14px;
+            transition: all ease 0.5s;
+            z-index: 1;
+          }
+          .comment-icon{
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background-image: url("../img/commnt-icon.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            right: 0px;
+            top: -5px;
+            transition: all ease 0.5s;
+            z-index: 1;
+          }
+          .comment-field{
+            resize: none;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid #A09B9B;
+            background: transparent;
+            width: 100%;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            position: relative;
+            z-index: 2;
+          }
+          .comment-field::placeholder{
+            padding-left: 65px;
+            color: #000;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 16px;
+            font-style: italic;
+          }
         }
       }
     }
@@ -434,7 +447,7 @@ body{
             position: relative;
             .contact-label{
               font-size: 14px;
-              color: #282423;
+              color: #A09B9B;
               font-style: normal;
               font-weight: normal;
               position: relative;
@@ -508,6 +521,13 @@ body{
           line-height: 28px;
           text-align: center;
           background: transparent;
+        }
+      }
+    }
+    .hidden-questions{
+      .question-main-container{
+        .comment-main-container{
+          display: none;
         }
       }
     }

@@ -82,10 +82,10 @@ body {
       body .survey-container .wrapper .main-question-box {
         margin-top: 20px; }
         body .survey-container .wrapper .main-question-box .q-text {
-          font-weight: 500;
+          font-weight: 600;
           font-size: 12px;
           text-transform: uppercase;
-          color: #000;
+          color: #000000;
           line-height: 17px; }
         body .survey-container .wrapper .main-question-box .range10 {
           display: flex;
@@ -123,7 +123,7 @@ body {
             body .survey-container .wrapper .main-question-box .range10 label .range-number {
               width: 26px;
               height: 26px;
-              line-height: 23px;
+              line-height: 20px;
               margin-right: 0px;
               text-align: center;
               border-radius: 50%;
@@ -138,24 +138,21 @@ body {
             body .survey-container .wrapper .main-question-box .range10 label .color3 {
               border: 1.5px solid #AB290C; }
             body .survey-container .wrapper .main-question-box .range10 label .color4 {
-              border: 1.5px solid #C13010;
-              line-height: 21px; }
+              border: 1.5px solid #C13010; }
             body .survey-container .wrapper .main-question-box .range10 label .color5 {
-              border: 1.5px solid #D04205;
-              line-height: 20px; }
+              border: 1.5px solid #D04205; }
             body .survey-container .wrapper .main-question-box .range10 label .color6 {
-              border: 1.5px solid #DA5B13;
-              line-height: 21px; }
+              border: 1.5px solid #DA5B13; }
             body .survey-container .wrapper .main-question-box .range10 label .color7 {
               border: 1.5px solid #EF6A1F;
-              line-height: 25px; }
+              line-height: 23px; }
             body .survey-container .wrapper .main-question-box .range10 label .color8 {
               border: 1.5px solid #F39A13; }
             body .survey-container .wrapper .main-question-box .range10 label .color9 {
-              border: 1.5px solid #FFBF00; }
+              border: 1.5px solid #FFBF00;
+              line-height: 23px; }
             body .survey-container .wrapper .main-question-box .range10 label .color10 {
-              border: 1.5px solid #4AAE27;
-              line-height: 21px; }
+              border: 1.5px solid #4AAE27; }
             body .survey-container .wrapper .main-question-box .range10 label .color11 {
               border: 1.5px solid #008A00; }
     body .survey-container .hidden-questions {
@@ -170,7 +167,8 @@ body {
           color: #666666;
           font-weight: 600;
           font-size: 13px;
-          line-height: 13px; }
+          line-height: 16px;
+          text-transform: uppercase; }
         body .survey-container .hidden-questions .thx-text-wrapper .light-txt {
           font-weight: 400;
           font-size: 13px;
@@ -211,16 +209,16 @@ body {
               height: 0;
               width: 0; }
             body .survey-container .hidden-questions .question-wrapper .flex-container .answers-wrapper .radio_container .answer {
-              font-size: 14px;
+              font-size: 12px;
               padding-left: 5px;
-              color: #000000;
+              color: #666666;
               display: inline-block; }
             body .survey-container .hidden-questions .question-wrapper .flex-container .answers-wrapper .radio_container .answer-font {
               font-size: 12px;
               color: #333333; }
             body .survey-container .hidden-questions .question-wrapper .flex-container .answers-wrapper .radio_container .checkmark {
               position: absolute;
-              top: 0px;
+              top: 1px;
               left: 0px;
               width: 16px;
               height: 16px;
@@ -299,38 +297,51 @@ body {
           font-size: 14px;
           line-height: 16px;
           color: #000000;
-          margin-bottom: 20px;
-          margin-top: 30px; }
+          margin-bottom: 35px;
+          margin-top: 20px; }
       body .survey-container .hidden-questions .comment-box {
-        padding: 35px 25px 20px 25px;
-        position: relative; }
-        body .survey-container .hidden-questions .comment-box .comment-icon {
-          position: absolute;
-          width: 24px;
-          height: 24px;
-          background-image: url("../img/commnt-icon.svg");
-          background-position: center;
-          background-repeat: no-repeat;
-          background-size: contain;
-          right: 25px;
-          top: 30px; }
-        body .survey-container .hidden-questions .comment-box .comment-field {
-          resize: none;
-          border: none;
-          outline: none;
-          border-bottom: 1px solid #A09B9B;
-          background: transparent;
-          width: 100%;
-          font-weight: 500;
-          font-size: 14px;
-          line-height: 16px; }
-        body .survey-container .hidden-questions .comment-box .comment-field::placeholder {
-          padding-left: 65px;
-          color: #000;
-          font-weight: 500;
-          font-size: 15px;
-          line-height: 16px;
-          font-style: italic; }
+        padding: 45px 25px 20px 25px; }
+        body .survey-container .hidden-questions .comment-box .comment-label-wrapper {
+          position: relative; }
+          body .survey-container .hidden-questions .comment-box .comment-label-wrapper .label-txt {
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #A09B9B;
+            font-size: 14px;
+            transition: all ease 0.5s;
+            z-index: 1; }
+          body .survey-container .hidden-questions .comment-box .comment-label-wrapper .comment-icon {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background-image: url("../img/commnt-icon.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            right: 0px;
+            top: -5px;
+            transition: all ease 0.5s;
+            z-index: 1; }
+          body .survey-container .hidden-questions .comment-box .comment-label-wrapper .comment-field {
+            resize: none;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid #A09B9B;
+            background: transparent;
+            width: 100%;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            position: relative;
+            z-index: 2; }
+          body .survey-container .hidden-questions .comment-box .comment-label-wrapper .comment-field::placeholder {
+            padding-left: 65px;
+            color: #000;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 16px;
+            font-style: italic; }
     body .survey-container .submit-wrapper {
       margin-top: 45px;
       display: none; }
@@ -359,7 +370,7 @@ body {
             position: relative; }
             body .survey-container #contacts-form .contacts-gray-block .wrapper .contact-box .contact-label {
               font-size: 14px;
-              color: #282423;
+              color: #A09B9B;
               font-style: normal;
               font-weight: normal;
               position: relative;
@@ -421,6 +432,8 @@ body {
           line-height: 28px;
           text-align: center;
           background: transparent; }
+    body .survey-container .hidden-questions .question-main-container .comment-main-container {
+      display: none; }
   body .contacts-page-container {
     max-width: 450px;
     margin: 0 auto; }
