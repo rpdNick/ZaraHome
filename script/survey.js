@@ -20,6 +20,11 @@ $('.nps-btn').on('change', function () {
             $(commentsNormal[i]).parent().find('.label-txt').css({"top": "0px"});
             $(commentsNormal[i]).parent().find('.comment-icon').css({"left": "auto", "right": "0px", "top":"-5px"});
         }
+        if ($('.main-radio-option:checked').is(":checked") == false) {
+            $('.main-radio-option').parents().find($('.comment-main-container')).hide();
+        } else {
+            $('.main-radio-option').parents().find($('.comment-main-container')).show();
+        }
     } else if (val > 6 && val < 9){
         $('.point_0-6').hide();
         $('.point_9-10').hide();
