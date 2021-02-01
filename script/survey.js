@@ -91,6 +91,11 @@ $(document).ready(function (){
             return false;
         }
     }
+    if ($('.main-radio-option:checked').is(":checked") && $('.main-radio-option:checked').val() == 'Другое') {
+        $('.main-radio-option:checked').parents().find($('.comment-main-container')).show();
+    } else {
+        $('.main-radio-option:checked').parents().find($('.comment-main-container')).hide();
+    }
 })
 
 /*Show comments*/
