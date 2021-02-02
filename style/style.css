@@ -560,7 +560,8 @@ body {
     padding: 0 25px; }
   body .survey-container .hidden-questions .question-wrapper .flex-container .answers-wrapper .answer-array .sub-answer-comment-container {
     margin: 10px 0px 25px 0px;
-    display: none; }
+    display: none;
+    padding: 0; }
 
 @media (max-height: 772px) {
   body .survey-container #contacts-form .contacts-submit-wrapper {
