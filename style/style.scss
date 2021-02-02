@@ -80,7 +80,7 @@ body{
     margin: 0 auto;
     padding-bottom: 30px;
     .wrapper{
-      padding: 0 25px;
+      //padding: 0 25px;
       .logo-box{
         padding-top: 30px;
         padding-bottom: 30px;
@@ -90,7 +90,7 @@ body{
         margin-top: 20px;
         .q-text{
           font-weight: 600;
-          font-size: 12px;
+          font-size: 14px;
           text-transform: uppercase;
           color: #000000;
           line-height: 17px;
@@ -223,6 +223,7 @@ body{
           font-size: 14px;
           line-height: 16px;
           color: #000;
+          padding: 0 25px;
         }
         .smaller-font{
           font-weight: 500;
@@ -232,7 +233,7 @@ body{
           display: flex;
           justify-content: space-between;
           max-width: 700px;
-          padding: 10px 0px 10px 0px;
+          padding: 10px 25px 10px 25px;
           .answers-wrapper{
             .radio_container{
               display: block;
@@ -472,6 +473,7 @@ body{
           color: #000000;
           margin-bottom: 35px;
           margin-top: 20px;
+          padding: 0 25px;
         }
       }
       .comment-box{
@@ -680,6 +682,15 @@ body{
       }
     }
   }
+  .survey-container .hidden-questions .question-wrapper .flex-container .answers-wrapper .answer-array{
+    .padding-wrapp{
+      padding: 0 25px;
+    }
+    .sub-answer-comment-container{
+      margin: 10px 0px 25px 0px;
+      display: none;
+    }
+  }
 }
 @media (max-height: 772px) {
   body .survey-container #contacts-form .contacts-submit-wrapper{
@@ -712,6 +723,11 @@ body{
     .bottom-txt{
       font-size: 14px;
     }
+  }
+}
+@media (max-width: 356px) {
+  body .survey-container .wrapper{
+    padding: 0 10px;
   }
 }
 @media (min-width: 430px) {
