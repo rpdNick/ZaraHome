@@ -682,14 +682,24 @@ body{
       }
     }
   }
-  .survey-container .hidden-questions .question-wrapper .flex-container .answers-wrapper .answer-array{
-    .padding-wrapp{
-      padding: 0 25px;
-    }
-    .sub-answer-comment-container{
-      margin: 10px 0px 25px 0px;
+  .survey-container .hidden-questions .question-wrapper .flex-container .answers-wrapper {
+    .error{
+      font-weight: 600;
+      font-size: 12px;
+      color: #E1032E;
+      margin-top: 10px;
+      padding-left: 25px;
       display: none;
-      padding: 0;
+    }
+    .answer-array{
+      .padding-wrapp{
+        padding: 0 25px;
+      }
+      .sub-answer-comment-container{
+        margin: 10px 0px 25px 0px;
+        display: none;
+        padding: 0;
+      }
     }
   }
 }

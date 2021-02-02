@@ -8,6 +8,7 @@ $('.nps-btn').on('change', function () {
         $('.point_7-8').hide();
         $('.point_9-10 .radio__option').prop('checked', false);
         $('.point_7-8 .radio__option').prop('checked', false);
+        $('.q-0-6').attr('data-reqired','');
         let commentsGood = document.querySelectorAll('.point_9-10 .comment-field');
         let commentsNormal = document.querySelectorAll('.point_7-8 .comment-field');
         for(let i = 0; i < $(commentsGood).length; i++){
@@ -20,7 +21,7 @@ $('.nps-btn').on('change', function () {
             $(commentsNormal[i]).parent().find('.label-txt').css({"top": "0px"});
             $(commentsNormal[i]).parent().find('.comment-icon').css({"left": "auto", "right": "0px", "top":"-5px"});
         }
-        console.log($('.main-radio-option').is(":checked"));
+        // console.log($('.main-radio-option').is(":checked"));
         if ($('.main-radio-option').is(":checked") === false) {
             $('.main-radio-option').parents().find($('.question-main-container .comment-main-container')).hide();
         }
@@ -28,9 +29,11 @@ $('.nps-btn').on('change', function () {
         $('.point_0-6').hide();
         $('.point_9-10').hide();
         $('.sub-answer-wrapper').hide();
+        $('.sub-answer-comment-container').hide();
         $('.point_7-8').fadeIn();
         $('.point_9-10 .radio__option').prop('checked', false);
         $('.point_0-6 .radio__option').prop('checked', false);
+        $('.q-0-6').removeAttr('data-reqired','');
         let commentsGood = document.querySelectorAll('.point_9-10 .comment-field');
         let commentsBad = document.querySelectorAll('.point_0-6 .comment-field');
         for(let i = 0; i < $(commentsGood).length; i++){
@@ -50,6 +53,7 @@ $('.nps-btn').on('change', function () {
         $('.sub-answer-wrapper').hide();
         $('.point_7-8 .radio__option').prop('checked', false);
         $('.point_0-6 .radio__option').prop('checked', false);
+        $('.q-0-6').removeAttr('data-reqired','');
         let commentsNormal = document.querySelectorAll('.point_7-8 .comment-field');
         let commentsBad = document.querySelectorAll('.point_0-6 .comment-field');
         for(let i = 0; i < $(commentsNormal).length; i++){
@@ -67,7 +71,7 @@ $('.nps-btn').on('change', function () {
 
 /* Show branch if radio was already checked*/
 $(document).ready(function (){
-    let val = $('.nps-btn:checked').val() * 1;
+    let valNps = $('.nps-btn:checked').val() * 1;
     let comments = document.querySelectorAll('.comment-field');
     for(let i = 0; i < comments.length; i++){
         let commentsVal = comments[i].value;
@@ -81,37 +85,52 @@ $(document).ready(function (){
     }
     if ($('.nps-btn:checked').length > 0){
         $('.submit-wrapper').show();
-        if(val < 7){
+        if(valNps < 7){
             $('.point_0-6').fadeIn();
             $('.point_9-10').hide();
             $('.point_7-8').hide();
-        } else if (val > 6 && val < 9){
+        } else if (valNps > 6 && valNps < 9){
             $('.point_0-6').hide();
             $('.point_9-10').hide();
             $('.point_7-8').fadeIn();
-        } else if (val > 8){
+        } else if (valNps > 8){
             $('.point_0-6').hide();
             $('.point_9-10').fadeIn();
             $('.point_7-8').hide();
-        } else if (isNaN(val)){
+        } else if (isNaN(valNps)){
             return false;
         }
     }
-    if ($('.main-radio-option:checked').is(":checked") && $('.main-radio-option:checked').val() == 'Другое') {
+    /* Show sab-questions if radio was checked */
+    if($('.main-radio-option').is(":checked") == true){
+        $('.main-radio-option:checked').parents('.answer-array').find('.sub-answer-wrapper').show();
+    } else {
+        $('.main-radio-option:checked').parents('.answer-array').find('.sub-answer-wrapper').hide();
+    }
+
+    /* Show/hide comment if radio was checked */
+    if ($('.main-radio-option').is(":checked") && $('.main-radio-option:checked').val() == 'Другое') {
         $('.main-radio-option:checked').parents().find($('.comment-main-container')).show();
     } else {
         $('.main-radio-option:checked').parents().find($('.comment-main-container')).hide();
+    }
+    /* Show/hide comment if sub-question was checked */
+    if ($('.sub-radio-option').is(":checked") == true){
+        $('.sub-radio-option:checked').parents('.answer-array').find('.sub-answer-comment-container').show();
+    }else {
+        $('.sub-radio-option:checked').parents('.answer-array').find('.sub-answer-wrapper').hide();
     }
 });
 
 /*Show comments*/
 $('.main-radio-option').on('change', function (){
     let val = $(this).val();
+    $('.error0-6').slideUp();
     if (val === 'Другое'){
         $(this).parents().find('.comment-main-container').slideDown();
     } else {
         $('.comment-label-wrapper .comment-field').val('');
-        $(this).parents().find('.comment-main-container').slideUp();
+        $(this).parents().find('.comment-main-container').fadeOut();
     }
     $('.sub-answer-comment-container').hide();
     /*Show and hide sub-questions*/
@@ -119,7 +138,6 @@ $('.main-radio-option').on('change', function (){
         $('.sub-answer-wrapper').hide();
         $('.sub-radio-option').prop('checked', false);
         $(this).parents('.answer-array').find('.sub-answer-wrapper').fadeIn();
-        console.log();
         // $(this).val();
     }
 });
@@ -127,7 +145,10 @@ $('.main-radio-option').on('change', function (){
 /* Show comments for sub-questions*/
 $('.sub-radio-option').on('change', function (){
    let val = $(this).val();
-   if (val == 'Другое' || val == 'Что было не так?'){
+    // if (val == 'Другое' || val == 'Что было не так?'){
+    //
+    //  }
+    if(val.length > 0){
        $(this).parents('.answer-array').find('.sub-answer-comment-container').slideDown();
    } else {
        $(this).parents('.answer-array').find('.sub-answer-comment-container').slideUp();
