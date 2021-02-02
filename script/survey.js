@@ -113,13 +113,25 @@ $('.main-radio-option').on('change', function (){
         $('.comment-label-wrapper .comment-field').val('');
         $(this).parents().find('.comment-main-container').slideUp();
     }
+    $('.sub-answer-comment-container').hide();
     /*Show and hide sub-questions*/
     if ($(this).is(":checked") === true){
         $('.sub-answer-wrapper').hide();
         $('.sub-radio-option').prop('checked', false);
         $(this).parents('.answer-array').find('.sub-answer-wrapper').fadeIn();
+        console.log();
         // $(this).val();
     }
+});
+
+/* Show comments for sub-questions*/
+$('.sub-radio-option').on('change', function (){
+   let val = $(this).val();
+   if (val == 'Другое' || val == 'Что было не так?'){
+       $(this).parents('.answer-array').find('.sub-answer-comment-container').slideDown();
+   } else {
+       $(this).parents('.answer-array').find('.sub-answer-comment-container').slideUp();
+   }
 });
 
 /*Textarea label settings*/
