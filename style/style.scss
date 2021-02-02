@@ -354,6 +354,113 @@ body{
                 }
               }
             }
+            .submit-wrapper{
+            }
+            .sub-answer-wrapper{
+              padding-left: 22px;
+              .sab-radio_container{
+                display: block;
+                position: relative;
+                padding-left: 20px;
+                margin-bottom: 12px;
+                cursor: pointer;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                box-sizing: unset;
+                .radio__option{
+                  position: absolute;
+                  opacity: 0;
+                  cursor: pointer;
+                  height: 0;
+                  width: 0;
+                }
+                .answer{
+                  font-size: 11px;
+                  padding-left: 5px;
+                  color: #666666;
+                  display: inline-block;
+                }
+                .checkmark{
+                  position: absolute;
+                  top: 6px;
+                  left: 4px;
+                  width: 11px;
+                  height: 11px;
+                  max-width: 11px;
+                  min-width: 11px;
+                  background-color: transparent;
+                  border: 1px solid #666666;
+                  border-radius: 50%;
+                  box-sizing: border-box;
+                }
+                input:checked ~ .checkmark:before {
+                  content: '';
+                  width: 11px;
+                  height: 11px;
+                  max-width: 11px;
+                  min-width: 11px;
+                  position: absolute;
+                  background: #9F0002;
+                  border: 1px solid #9F0002;
+                  left: -2px;
+                  top: -2px;
+                  border-radius: 50%;
+                  box-sizing: unset;
+                }
+                input:checked ~ .checkmark{
+                  animation: pulse 0.5s;
+                  @-webkit-keyframes pulse {
+                    0% {
+                      -webkit-box-shadow: 0 0 0 0 rgba(244,2,0, 0.4);
+                    }
+                    70% {
+                      -webkit-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+                    }
+                    100% {
+                      -webkit-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+                    }
+                  }
+                  @keyframes pulse {
+                    0% {
+                      -webkit-box-shadow: 0 0 0 0 rgba(244,2,0, 0.4);
+                      box-shadow: 0 0 0 0 rgba(204,169,44, 0.4);
+                    }
+                    70% {
+                      -moz-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+                      box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+                    }
+                    100% {
+                      -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+                      box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+                    }
+                  }
+                }
+                .answer-with-comment-wrap{
+                  display: flex;
+                  position: relative;
+                  .comment-to-other{
+                    width: 250px;
+                    margin-left: 20px;
+                    position: absolute;
+                    top: -2px;
+                    left: 43px;
+                    #short-comment{
+                      outline: none;
+                      border: none;
+                      border-bottom: 1px solid #9ea1a4;
+                      font-size: 14px;
+                      color: #000;
+                      width: 100%;
+                      background-color: transparent;
+                      border-radius: 0;
+                      -webkit-appearance: none;
+                    }
+                  }
+                }
+              }
+            }
           }
         }
         .comment-title{
@@ -403,6 +510,7 @@ body{
             font-size: 14px;
             line-height: 16px;
             position: relative;
+            border-radius: 0;
             z-index: 2;
           }
           .comment-field::placeholder{

@@ -92,7 +92,7 @@ $(document).ready(function (){
             $('.point_0-6').hide();
             $('.point_9-10').fadeIn();
             $('.point_7-8').hide();
-        } else if (val == NaN){
+        } else if (isNaN(val)){
             return false;
         }
     }
@@ -102,6 +102,10 @@ $(document).ready(function (){
         $('.main-radio-option:checked').parents().find($('.comment-main-container')).hide();
     }
 })
+
+/*Show sub-questions*/
+
+
 
 /*Show comments*/
 $('.main-radio-option').on('change', function (){
@@ -113,7 +117,7 @@ $('.main-radio-option').on('change', function (){
     }
 });
 
-/*Textarea placeholder settings*/
+/*Textarea label settings*/
 $('.comment-field').on("focus", function (){
     $(this).parent().find('.label-txt').css({"top": "-25px"});
     $(this).parent().find('.comment-icon').css({"left": "103px", "right": "auto", "top":"-30px"});
