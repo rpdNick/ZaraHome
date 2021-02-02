@@ -27,6 +27,7 @@ $('.nps-btn').on('change', function () {
     } else if (val > 6 && val < 9){
         $('.point_0-6').hide();
         $('.point_9-10').hide();
+        $('.sub-answer-wrapper').hide();
         $('.point_7-8').fadeIn();
         $('.point_9-10 .radio__option').prop('checked', false);
         $('.point_0-6 .radio__option').prop('checked', false);
@@ -46,6 +47,7 @@ $('.nps-btn').on('change', function () {
         $('.point_0-6').hide();
         $('.point_9-10').fadeIn();
         $('.point_7-8').hide();
+        $('.sub-answer-wrapper').hide();
         $('.point_7-8 .radio__option').prop('checked', false);
         $('.point_0-6 .radio__option').prop('checked', false);
         let commentsNormal = document.querySelectorAll('.point_7-8 .comment-field');
@@ -112,7 +114,6 @@ $('.main-radio-option').on('change', function (){
         $(this).parents().find('.comment-main-container').slideUp();
     }
     /*Show and hide sub-questions*/
-    console.log($(this).is(":checked"))
     if ($(this).is(":checked") === true){
         $('.sub-answer-wrapper').hide();
         $('.sub-radio-option').prop('checked', false);
