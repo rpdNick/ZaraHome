@@ -101,13 +101,10 @@ $(document).ready(function (){
     } else {
         $('.main-radio-option:checked').parents().find($('.comment-main-container')).hide();
     }
-})
-
-/*Show sub-questions*/
-
-
+});
 
 /*Show comments*/
+let mainRadios = document.querySelectorAll('.main-radio-option');
 $('.main-radio-option').on('change', function (){
     let val = $(this).val();
     if (val === 'Другое'){
@@ -115,13 +112,20 @@ $('.main-radio-option').on('change', function (){
     } else {
         $(this).parents().find('.comment-main-container').slideUp();
     }
+    /*Show and hide sub-questions*/
+    console.log($(this).is(":checked"))
+    if ($(this).is(":checked") === true){
+        $('.sub-answer-wrapper').hide();
+        $('.sub-radio-option').prop('checked', false);
+        $(this).parents('.answer-array').find('.sub-answer-wrapper').fadeIn();
+    }
 });
 
 /*Textarea label settings*/
 $('.comment-field').on("focus", function (){
     $(this).parent().find('.label-txt').css({"top": "-25px"});
     $(this).parent().find('.comment-icon').css({"left": "103px", "right": "auto", "top":"-30px"});
-})
+});
 $('.comment-field').focusout(function (){
     $(this).parent().find('.label-txt').css({"top": "0px"});
     $(this).parent().find('.comment-icon').css({"left": "auto", "right": "0px", "top":"-5px"});
@@ -129,7 +133,7 @@ $('.comment-field').focusout(function (){
         $(this).parent().find('.label-txt').css({"top": "-25px"});
         $(this).parent().find('.comment-icon').css({"left": "103px", "right": "auto", "top":"-30px"});
     }
-})
+});
 
 
 

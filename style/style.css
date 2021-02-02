@@ -292,7 +292,8 @@ body {
                   border-radius: 0;
                   -webkit-appearance: none; }
           body .survey-container .hidden-questions .question-wrapper .flex-container .answers-wrapper .sub-answer-wrapper {
-            padding-left: 22px; }
+            padding-left: 22px;
+            display: none; }
             body .survey-container .hidden-questions .question-wrapper .flex-container .answers-wrapper .sub-answer-wrapper .sab-radio_container {
               display: block;
               position: relative;
