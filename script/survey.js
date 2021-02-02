@@ -20,10 +20,9 @@ $('.nps-btn').on('change', function () {
             $(commentsNormal[i]).parent().find('.label-txt').css({"top": "0px"});
             $(commentsNormal[i]).parent().find('.comment-icon').css({"left": "auto", "right": "0px", "top":"-5px"});
         }
-        if ($('.main-radio-option:checked').is(":checked") == false) {
-            $('.main-radio-option').parents().find($('.comment-main-container')).hide();
-        } else {
-            $('.main-radio-option').parents().find($('.comment-main-container')).show();
+        console.log($('.main-radio-option').is(":checked"));
+        if ($('.main-radio-option').is(":checked") === false) {
+            $('.main-radio-option').parents().find($('.question-main-container .comment-main-container')).hide();
         }
     } else if (val > 6 && val < 9){
         $('.point_0-6').hide();
@@ -104,12 +103,12 @@ $(document).ready(function (){
 });
 
 /*Show comments*/
-let mainRadios = document.querySelectorAll('.main-radio-option');
 $('.main-radio-option').on('change', function (){
     let val = $(this).val();
     if (val === 'Другое'){
         $(this).parents().find('.comment-main-container').slideDown();
     } else {
+        $('.comment-label-wrapper .comment-field').val('');
         $(this).parents().find('.comment-main-container').slideUp();
     }
     /*Show and hide sub-questions*/
@@ -118,6 +117,7 @@ $('.main-radio-option').on('change', function (){
         $('.sub-answer-wrapper').hide();
         $('.sub-radio-option').prop('checked', false);
         $(this).parents('.answer-array').find('.sub-answer-wrapper').fadeIn();
+        // $(this).val();
     }
 });
 
