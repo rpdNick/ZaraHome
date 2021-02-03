@@ -62,7 +62,6 @@ form.addEventListener('submit', function (e){
         // console.log(val.length);
         // console.log(reqComment[i])
         if(val.length < 1){
-            console.log('comment-error')
             erroreArrayElements.push(reqComment[i]);
             $(reqComment[i]).on('click', function () {
                 $(this).parents('.q-7-8-comment-box').find('.req-field-error').hide();
