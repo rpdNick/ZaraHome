@@ -7,6 +7,15 @@ for (let i = 0; i < onlyNumbers.length; i++) {
         }
     };
 }
+$('.data-field').on("focus", function (){
+    $(this).parent().find('.contact-label').css({"top":"15px"});
+});
+$('.data-field').focusout(function (){
+    $(this).parent().find('.contact-label').css({"top":"40px"});
+    if($(this).val().length > 0){
+        $(this).parent().find('.contact-label').css({"top":"15px"});
+    }
+});
 
 $('#phone').on("focus", function (){
    $('.phone-prefix').fadeIn();

@@ -476,7 +476,7 @@ body {
           body .survey-container #contacts-form .contacts-gray-block .wrapper .line {
             border-top: 1px solid #A09B9B; }
           body .survey-container #contacts-form .contacts-gray-block .wrapper .contact-box {
-            margin-top: 40px;
+            margin-top: 15px;
             position: relative; }
             body .survey-container #contacts-form .contacts-gray-block .wrapper .contact-box .contact-label {
               font-size: 14px;
@@ -484,18 +484,22 @@ body {
               font-style: normal;
               font-weight: normal;
               position: relative;
-              padding-left: 70px;
-              margin-bottom: 20px; }
+              padding-left: 35px;
+              margin-bottom: 20px;
+              top: 40px;
+              z-index: 1;
+              transition: all ease 0.3s; }
             body .survey-container #contacts-form .contacts-gray-block .wrapper .contact-box .contact-label:before {
               content: '';
               position: absolute;
-              left: 20px;
+              left: 0px;
               top: -4px;
               width: 23px;
               height: 23px;
               background-size: contain;
               background-position: center;
-              background-repeat: no-repeat; }
+              background-repeat: no-repeat;
+              z-index: 1; }
             body .survey-container #contacts-form .contacts-gray-block .wrapper .contact-box .name-label:before {
               background: url("../img/name.svg"); }
             body .survey-container #contacts-form .contacts-gray-block .wrapper .contact-box .phone-label:before {
@@ -513,7 +517,9 @@ body {
               width: 100%;
               padding: 10px 5px;
               font-size: 14px;
-              color: #000; }
+              color: #000;
+              position: relative;
+              z-index: 2; }
             body .survey-container #contacts-form .contacts-gray-block .wrapper .contact-box #phone {
               padding-left: 15px; }
             body .survey-container #contacts-form .contacts-gray-block .wrapper .contact-box .phone-prefix {
@@ -604,7 +610,7 @@ body {
     margin-top: 100px; } }
 @media (max-height: 729px) {
   body .survey-container #contacts-form .contacts-submit-wrapper {
-    margin-top: 40px; } }
+    margin-top: 60px; } }
 @media (max-height: 680px) {
   body .main-page-container .survey-wrapper .top-title {
     margin-top: 43px; }
