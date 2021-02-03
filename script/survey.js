@@ -143,7 +143,8 @@ $('.main-radio-option').on('change', function (){
         $('.sub-answer-wrapper').hide();
         $('.sub-radio-option').prop('checked', false);
         $(this).parents('.answer-array').find('.sub-answer-wrapper').fadeIn();
-        // $(this).val();
+        $('.sub-radio-option').removeClass('required-sub-radio');
+        $(this).parents('.answer-array').find('.sub-answer-wrapper .sub-radio-option').addClass('required-sub-radio');
     }
 });
 
@@ -154,9 +155,16 @@ $('.sub-radio-option').on('change', function (){
     //
     //  }
     if(val.length > 0){
-       $(this).parents('.answer-array').find('.sub-answer-comment-container').slideDown();
+        $(this).parents('.answer-array').find('.sub-answer-comment-container').slideDown();
+        if(val == 'Другое' || val == 'Что было не так?'){
+            $('.sub-comment').removeClass('required-comment');
+            $(this).parents('.answer-array').find('.sub-answer-comment-container .comment-field').addClass("required-comment");
+        } else {
+            $('.sub-comment').removeClass('required-comment');
+            $(this).parents('.answer-array').find('.sub-answer-comment-container .comment-field').removeClass("required-comment");
+        }
    } else {
-       $(this).parents('.answer-array').find('.sub-answer-comment-container').slideUp();
+        $(this).parents('.answer-array').find('.sub-answer-comment-container').slideUp();
    }
 });
 
