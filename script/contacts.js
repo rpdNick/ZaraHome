@@ -29,26 +29,22 @@ $('#phone').focusout(function (){
 });
 
 $(document).ready(function (){
-    $('.data-field').on("focus", function (){
-        $(this).parent().find('.contact-label').css({"top":"15px"});
-    });
-    $('.data-field').focusout(function (){
-        $(this).parent().find('.contact-label').css({"top":"40px"});
-        if($(this).val().length > 0){
-            $(this).parent().find('.contact-label').css({"top":"15px"});
+    let contacts = document.querySelectorAll('.data-field');
+    for (let i = 0; i < contacts.length; i++){
+        let val = contacts[i].value.length;
+        console.log(val);
+        if (val > 0){
+            $(contacts[i]).parent().find('.contact-label').css({"top":"15px"});
+            if(contacts[1].value > 0){
+                $('.phone-prefix').fadeIn();
+            }else {
+                $('.phone-prefix').fadeOut();
+            }
         }
-    });
-
-    $('#phone').on("focus", function (){
-        $('.phone-prefix').fadeIn();
-    });
-    $('#phone').focusout(function (){
-        if( $(this).val().length < 1){
-            $('.phone-prefix').fadeOut();
-        } else {
-            $('.phone-prefix').fadeIn();
+         else {
+            $(contacts[i]).parent().find('.contact-label').css({"top":"40px"});
         }
-    });
+    }
 });
 
 const form = document.getElementById('contacts-form');
