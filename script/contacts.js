@@ -28,6 +28,29 @@ $('#phone').focusout(function (){
     }
 });
 
+$(document).ready(function (){
+    $('.data-field').on("focus", function (){
+        $(this).parent().find('.contact-label').css({"top":"15px"});
+    });
+    $('.data-field').focusout(function (){
+        $(this).parent().find('.contact-label').css({"top":"40px"});
+        if($(this).val().length > 0){
+            $(this).parent().find('.contact-label').css({"top":"15px"});
+        }
+    });
+
+    $('#phone').on("focus", function (){
+        $('.phone-prefix').fadeIn();
+    });
+    $('#phone').focusout(function (){
+        if( $(this).val().length < 1){
+            $('.phone-prefix').fadeOut();
+        } else {
+            $('.phone-prefix').fadeIn();
+        }
+    });
+});
+
 const form = document.getElementById('contacts-form');
 form.addEventListener('submit', (e) => {
     e.preventDefault();
