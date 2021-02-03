@@ -32,7 +32,7 @@ $(document).ready(function (){
     let contacts = document.querySelectorAll('.data-field');
     for (let i = 0; i < contacts.length; i++){
         let val = contacts[i].value.length;
-        console.log(val);
+        // console.log(val);
         if (val > 0){
             $(contacts[i]).parent().find('.contact-label').css({"top":"15px"});
             if(contacts[1].value > 0){
