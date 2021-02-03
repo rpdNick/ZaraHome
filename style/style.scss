@@ -542,6 +542,7 @@ body{
         line-height: 28px;
         text-align: center;
         background: transparent;
+        cursor: pointer;
       }
     }
     #contacts-form{
@@ -607,6 +608,7 @@ body{
               padding: 10px 5px;
               font-size: 14px;
               color: #000;
+              display: none;
             }
             .data-error{
               font-weight: 600;

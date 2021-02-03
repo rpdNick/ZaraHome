@@ -8,6 +8,8 @@ $('.nps-btn').on('change', function () {
         $('.point_7-8').hide();
         $('.point_9-10 .radio__option').prop('checked', false);
         $('.point_7-8 .radio__option').prop('checked', false);
+        $('.q-7-8').removeAttr('data-reqired','');
+        $('.q-9-10').removeAttr('data-reqired','');
         $('.q-0-6').attr('data-reqired','');
         let commentsGood = document.querySelectorAll('.point_9-10 .comment-field');
         let commentsNormal = document.querySelectorAll('.point_7-8 .comment-field');
@@ -34,6 +36,8 @@ $('.nps-btn').on('change', function () {
         $('.point_9-10 .radio__option').prop('checked', false);
         $('.point_0-6 .radio__option').prop('checked', false);
         $('.q-0-6').removeAttr('data-reqired','');
+        $('.q-9-10').removeAttr('data-reqired','');
+        $('.q-7-8').attr('data-reqired','');
         let commentsGood = document.querySelectorAll('.point_9-10 .comment-field');
         let commentsBad = document.querySelectorAll('.point_0-6 .comment-field');
         for(let i = 0; i < $(commentsGood).length; i++){
@@ -54,6 +58,8 @@ $('.nps-btn').on('change', function () {
         $('.point_7-8 .radio__option').prop('checked', false);
         $('.point_0-6 .radio__option').prop('checked', false);
         $('.q-0-6').removeAttr('data-reqired','');
+        $('.q-7-8').removeAttr('data-reqired','');
+        $('.q-9-10').attr('data-reqired','');
         let commentsNormal = document.querySelectorAll('.point_7-8 .comment-field');
         let commentsBad = document.querySelectorAll('.point_0-6 .comment-field');
         for(let i = 0; i < $(commentsNormal).length; i++){
@@ -125,7 +131,6 @@ $(document).ready(function (){
 /*Show comments*/
 $('.main-radio-option').on('change', function (){
     let val = $(this).val();
-    $('.error0-6').slideUp();
     if (val === 'Другое'){
         $(this).parents().find('.comment-main-container').slideDown();
     } else {

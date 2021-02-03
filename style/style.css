@@ -445,7 +445,8 @@ body {
         font-size: 16px;
         line-height: 28px;
         text-align: center;
-        background: transparent; }
+        background: transparent;
+        cursor: pointer; }
     body .survey-container #contacts-form {
       position: relative; }
       body .survey-container #contacts-form .contacts-gray-block {
@@ -500,7 +501,8 @@ body {
               left: 0;
               padding: 10px 5px;
               font-size: 14px;
-              color: #000; }
+              color: #000;
+              display: none; }
             body .survey-container #contacts-form .contacts-gray-block .wrapper .contact-box .data-error {
               font-weight: 600;
               font-size: 12px;
