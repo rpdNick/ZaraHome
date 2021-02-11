@@ -9,7 +9,7 @@
   padding: 0 25px;
 }
 .gray-block{
-  background: #ECECEC;
+  background: #F1EEE9;
 }
 .p-10{
   padding: 10px 0px;
@@ -235,6 +235,7 @@ body{
           max-width: 700px;
           padding: 10px 25px 10px 25px;
           .answers-wrapper{
+            width: 100%;
             .radio_container{
               display: block;
               position: relative;
